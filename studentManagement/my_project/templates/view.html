@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="card text-white bg-info mb-8" style="max-width: 20rem;">
+    <div class="card-header">Student Info</div>
+    <div class="card-body">
+      <p> <strong>STUDENT ID:</strong> {{student.student_id}} <p>
+      <p><strong>STUDENT NAME:</strong> {{student.name}}<p>
+      <p><strong>STUDENT EMAIL:</strong> {{student.email}} <p>
+      <p><strong>FIELD OF STUDY:</strong> {{student.field_of_study}}<p>
+      <p><strong>GPA:</strong> {{student.gpa}}<p>
+
+    
+    </div>
+  </div>
+
+
+{% endblock content %}

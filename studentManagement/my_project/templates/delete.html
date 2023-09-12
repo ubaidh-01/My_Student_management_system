@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<div>
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Cancel</h5>
+          <a type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" href="{% url 'home' %}">
+          
+          </a>
+            <span aria-hidden="true"></span>
+          </button>
+        </div>
+
+        <form method="POST">
+            {% csrf_token %}
+        <div class="modal-body">
+          <p>Are you sure you want to delete the student '{{student}}'?</p>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary">Delete</button>
+          
+        </div>
+    </form>
+
+      </div>
+    </div>
+  </div> 
+
+  {% endblock content %}
